@@ -1,4 +1,4 @@
-<html>
+﻿<html lang="en-us">
 
 <head>
     <!-- Todo: Merge useful css into one file [style.css] -->
@@ -15,23 +15,72 @@
         <div class="bg-lightPink fg-white align-center">
             <div class="container">
                 <div class="no-overflow" style="padding-top: 40px">
-                    <h1 style="font-size: 4.5rem; line-height: 1" class="text-shadow metro-title text-light centered">Multifunctional</h1>
-                    <div class="padding30 sub-leader text-light">
+                    <h1 style="font-size: 4.5rem; line-height: 1" class="text-shadow metro-title text-light centered" title="A website designed for great things"></i>Multifunctional</h1>
+                    <div class="padding30 sub-leader text-light" title="CSS provided from Metro UI">
                         This website is currently under construction
                     </div>
+                    <hr style="color: white;"/>
                     <p class="" style="margin-top: 10px; padding: 0 50px">
                         Welcome to Multifunctional site. This website is designed to be able to do many things, ranging from calculators to calendars, to buttons with links to all kinds of useful platforms.
                     </p>
+                    <p>Type in 2 values in the boxes below. The values will be compared and, given the command, will find the bigger or smaller value</p>
+                    <div class="input-control text">
+                        <input type="text" placeholder="First Value" id="value1">
+                        <input type="text" placeholder="Second Value" id="value2">
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <button class="button block-shadow lighten" id="bigB">Bigger value</button>
+                    <button class="button block-shadow lighten" id="smallB">Smaller value</button>
+                    <br />
+                    <div class="input-control text">
+                        <input type="text" placeholder="Result Value" id="Result" readonly>
+                    </div>
                     <div class="margin60">
                         <div class="clear-float">
                             <a href="https://youtube.com/"><button class="button big-button block-shadow alert lighten" ><i class="fa fa-youtube-play" style="font-size:25px;"></i> YouTube</button></a>
                             <a href="https://github.com/"><button class="button big-button block-shadow success lighten" ><i class="fa fa-github" style="font-size:25px;"></i> GitHub</button></a>
-                            <a href="https:google.ca/"><button class="button big-button block-shadow warning lighten"><i class="fa fa-google" style="font-size:25px;"></i> Google</button>
+                            <a href="https://google.ca/"><button class="button big-button block-shadow warning lighten"><i class="fa fa-google" style="font-size:25px;"></i> Google</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 	</div>
+    <script>
+        var val1 = document.getElementById("value1");
+        var val2 = document.getElementById("value2");
+        var maxButton = document.getElementById("bigB");
+        var minButton = document.getElementById("smallB");
+        var result = document.getElementById("Result");
+
+        maxButton.addEventListener("click", calcMax);
+        minButton.addEventListener("click", calcMin);
+
+        function calcMax() {
+            var firstValue = parseFloat(val1.value);
+            var secondValue = parseFloat(val2.value);
+            if (isNaN(firstValue)) {
+                alert("First value is not a valid number");
+            } else if (isNaN(secondValue)) {
+                alert("Second value is not a valid number");
+            } else {
+                result.value = Math.max(firstValue, secondValue);
+            }
+        }
+
+        function calcMin() {
+            var firstValue = parseFloat(val1.value);
+            var secondValue = parseFloat(val2.value);
+            if (isNaN(firstValue)) {
+                alert("First value is not a valid number");
+            } else if (isNaN(secondValue)) {
+                alert("Second value is not a valid number");
+            } else {
+                result.value = Math.min(firstValue, secondValue);
+            }
+        }
+    </script>
 </body>
 </html>
