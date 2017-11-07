@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kilometres to Seconds convertor</title>
+		<!-- Attach CSS Stylesheet -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="bg-lightGreen fg-darkBlue ">
+        <div class="alignCenter">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Convertor</a>
+    <div class="dropdown-content">
+      <a href="ktm.html">Kilometres to Miles</a>
+      <a href="hts.html">Hours to Seconds</a>
+		<a href="calculator.html">Calculator</a>
+	  </div>
+	</li>
+	</ul>
+	<div class="animate-fade">
+		<h1 class="mainHeading">Kilometres to Miles Convertor</h1>
+			<p>&#9660; Type in your values, and they will be converted below &#9660;</p>
+			<br />
+			<input type="text" placeholder="Kilometres" id="km">
+			<br />
+			<button class="button button-shadow animate-fade-in-out" id="convert">Convert</button>
+			<br />
+			<input type="text" placeholder="Result" id="result" disabled>
+			</div>
+		</div>
+		<footer>
+			<ul>
+				<li><a href="license.html">License</a></li>
+                <li><a href="troubleshoot.html">Troubleshoot</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+<script>
+	var kilometres = document.getElementById("km");
+	var con = document.getElementById("convert");
+	var res = document.getElementById("result")
+
+	con.addEventListener("click", convert);
+
+	function convert() {
+		var firstValue = parseFloat(kilometres.value);
+		if (isNaN(firstValue)) {
+			alert("The kilometres is not a valid number");
+		} else {
+			res.value = firstValue * 0.621;
+		}
+	}
+</script>
