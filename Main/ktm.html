@@ -22,17 +22,15 @@
 					<a href="calculator.html">Calculator</a>
 				</div>
 			</li>
+            <li><a href="facts.html">Fun Facts</a></li>
 			<li style="float: right;"><a id="time"></a></li>
 		</ul>
 		<div class="animate-fade">
 			<h1 class="mainHeading">Kilometres to Miles Convertor</h1>
 			<p class="animate-bobbing">&#9660; Type in your values, and they will be converted below &#9660;</p>
 			<br />
-			<input type="text" placeholder="Kilometres" id="km">
-			<br />
-			<button class="button button-shadow animate-top" id="convert">Convert</button>
-			<br />
-			<input type="text" placeholder="Result" id="result" disabled>
+			<input type="text" placeholder="Kilometres" id="kilometres" oninput="convertKM(this.value)">
+			<input type="text" placeholder="Miles" id="miles" oninput="convertM(this.value)">
 		</div>
 	</div>
 	<footer>
@@ -45,20 +43,11 @@
 </body>
 </html>
 <script>
-	//General Variables
-	var kilometres = document.getElementById("km");
-	var con = document.getElementById("convert");
-	var res = document.getElementById("result")
+    function convertKM(val) {
+        document.getElementById("miles").value = (val * 0.621).toFixed(3);
+    }
 
-	//When Convert button clicked, call convert()
-	con.addEventListener("click", convert);
-
-	function convert() {
-		var firstValue = parseFloat(kilometres.value); // Parse it, or read it as a float
-		if (isNaN(firstValue)) { // If the parsed value is NaN (Not a Number)
-			alert("The kilometres is not a valid number");
-		} else {
-			res.value = firstValue * 0.621;
-		}
-	}
+    function convertM(val) {
+        document.getElementById("kilometres").value = (val / 0.621).toFixed(3);
+    }
 </script>

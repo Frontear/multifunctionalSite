@@ -22,6 +22,7 @@
 					<a href="calculator.html">Calculator</a>
 				</div>
 			</li>
+            <li><a href="facts.html">Fun Facts</a></li>
 			<li style="float: right;"><a id="time"></a></li>
 		</ul>
 		<div class="animate-fade">
@@ -51,10 +52,13 @@
 		var firstValue = parseFloat(val.value); // Parse it, or read it as a float
 		if (isNaN(firstValue)) { // If the parsed value is NaN (Not a Number)
 			alert("The hours is not a valid number");
-		} else if (val.value % 2 == 0) {
+		} else if (val.value % 2 == 0) { // If dividing the value by 2 yields a remainder of 0
 			document.getElementById("result").innerHTML = "The value " + val.value + " is even!";
 		} else if (val.value % 2 != 0) {
-			document.getElementById("result").innerHTML = "The value " + val.value + " is odd!";
+		    document.getElementById("result").innerHTML = "The value " + val.value + " is odd!";
+		} else {
+		    // Weirdly necessary for some browsers, this should never actually excecute
+		    location.reload(true); // Refresh the browser, something went wrong on your end
 		}
 	}
 </script>

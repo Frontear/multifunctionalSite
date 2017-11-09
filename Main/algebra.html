@@ -22,6 +22,7 @@
 					<a href="calculator.html">Calculator</a>
 				</div>
 			</li>
+            <li><a href="facts.html">Fun Facts</a></li>
 			<li style="float: right;"><a id="time"></a></li>
 		</ul>
 		<div class="animate-fade">
@@ -92,6 +93,9 @@
 			calcB.value = Math.sqrt(Bcalc);
 			calcA.value = Math.sqrt(AsmallerValue);
 			calcC.value = Math.sqrt(AbiggerValue);
+		} else {
+		    // Weirdly necessary for some browsers, this should never actually excecute
+		    location.reload(true); // Refresh the browser, something went wrong on your end
 		}
 	}
 </script>

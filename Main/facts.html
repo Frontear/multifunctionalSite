@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun Facts</title>
+    <!-- Attach CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Attach time function (js) -->
+    <script src="time.js"></script>
+</head>
+<body class="bg-lightGreen fg-darkBlue">
+    <div class="alignCenter">
+        <ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Mathematics</a>
+				<div class="dropdown-content">
+					<a href="algebra.html">Algebra</a>
+					<a href="ktm.html">Kilometres to Miles</a>
+					<a href="hts.html">Hours to Seconds</a>
+					<a href="ptkg.html">Pounds to Kilograms</a>
+					<a href="eoo.html">Even or Odd</a>
+					<a href="calculator.html">Calculator</a>
+				</div>
+			</li>
+            <li><a href="facts.html">Fun Facts</a></li>
+			<li style="float: right;"><a id="time"></a></li>
+		</ul>
+        <div class="animate-fade">
+            <h1 class="mainHeading animate-top"><a href="https://www.thefactsite.com/2011/07/top-100-random-funny-facts.html" style="color: #2A65CC" title="Link to original source">Fun Facts</a></h1>
+            <p class="animate-fade animate-bobbing" id="fact">&#9660; Click the button to display a fact &#9660;</p>
+            <button class="button button-shadow" onclick="displayFact()">Fact</button>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="license.html">License</a></li>
+            <li><a href="troubleshoot.html">Troubleshoot</a></li>
+            <li style="float: right;"><a href="debug.html" style="color: gray;" onclick="return false;">Fun</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+<script>
+    // Original facts from : 
+    var theFact = document.getElementById("fact");
+    
+    // Calculates a random number, and returns the binded fact
+    function displayFact() {
+        var random = Math.floor(Math.random() * 50);
+        if (random == 0) {
+            theFact.innerHTML = "In the UK, it is illegal to eat mince pies on Christmas Day!";
+            theFact.className = "animate-bobbing";
+        } else if (random == 1) {
+            theFact.innerHTML = "Pteronophobia is the fear of being tickled by feathers!";
+            theFact.className = "animate-bobbing";
+        } else if (random == 2) {
+            theFact.innerHTML = "When hippos are upset, their sweat turns red.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 3) {
+            theFact.innerHTML = "A flock of crows is known as a murder.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 4) {
+            theFact.innerHTML = "“Facebook Addiction Disorder” is a mental disorder identified by Psychologists.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 5) {
+            theFact.innerHTML = "The average woman uses her height in lipstick every 5 years.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 6) {
+            theFact.innerHTML = "Cherophobia is the fear of fun.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 7) {
+            theFact.innerHTML = "Human saliva has a boiling point three times that of regular water.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 8) {
+            theFact.innerHTML = "Billy goats urinate on their own heads to smell more attractive to females.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 9) {
+            theFact.innerHTML = "King Henry VIII slept with a gigantic axe beside him.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 10) {
+            theFact.innerHTML = "An eagle can kill a young deer and fly away with it.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 11) {
+            theFact.innerHTML = "Heart attacks are more likely to happen on a Monday.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 12) {
+            theFact.innerHTML = "There is a species of spider called the Hobo Spider.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 13) {
+            theFact.innerHTML = "A toaster uses almost half as much energy as a full-sized oven.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 14) {
+            theFact.innerHTML = "You cannot snore and dream at the same time.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 15) {
+            theFact.innerHTML = "The following can be read forward and backwards: Do geese see God?";
+            theFact.className = "animate-bobbing";
+        } else if (random == 16) {
+            theFact.innerHTML = "A baby octopus is about the size of a flea when it is born.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 17) {
+            theFact.innerHTML = "In Uganda, 50% of the population is under 15 years of age.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 18) {
+            theFact.innerHTML = "Arab women can initiate a divorce if their husbands don’t pour coffee for them.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 19) {
+            theFact.innerHTML = "Recycling one glass jar saves enough energy to watch TV for 3 hours.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 20) {
+            theFact.innerHTML = "Catfish are the only animals that naturally have an odd number of whiskers.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 21) {
+            theFact.innerHTML = "Facebook, Skype and Twitter are all banned in China.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 22) {
+            theFact.innerHTML = "95% of people text things they could never say in person.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 23) {
+            theFact.innerHTML = "The Titanic was the first ship to use the SOS signal.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 24) {
+            theFact.innerHTML = "About 8,000 Americans are injured by musical instruments each year.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 25) {
+            theFact.innerHTML = "The French language has seventeen different words for ‘surrender’.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 26) {
+            theFact.innerHTML = "Nearly three percent of the ice in Antarctic glaciers is penguin urine.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 27) {
+            theFact.innerHTML = "Bob Dylan’s real name is Robert Zimmerman.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 28) {
+            theFact.innerHTML = "Sea otters hold hands when they sleep so they don’t drift away from each other.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 29) {
+            theFact.innerHTML = "A small child could swim through the veins of a blue whale.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 30) {
+            theFact.innerHTML = "Hewlett-Packard’s name was decided in a coin toss.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 31) {
+            theFact.innerHTML = "The total number of steps in the Eiffel Tower are 1665.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 32) {
+            theFact.innerHTML = "An arctophile is a person who collects, or is very fond of teddy bears.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 33) {
+            theFact.innerHTML = "Pirates wore earrings because they believed it improved their eyesight.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 34) {
+            theFact.innerHTML = "The Twitter bird actually has a name – Larry.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 35) {
+            theFact.innerHTML = "Octopuses have four pairs of arms.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 36) {
+            theFact.innerHTML = "In England, in the 1880’s, “Pants” was considered a dirty word.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 37) {
+            theFact.innerHTML = "It snowed in the Sahara desert for 30 minutes on the 18th February 1979.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 38) {
+            theFact.innerHTML = "If you leave everything to the last minute… it will only take a minute.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 39) {
+            theFact.innerHTML = "The first alarm clock could only ring at 4am.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 40) {
+            theFact.innerHTML = "Panphobia is the fear of everything… which is a pretty unlucky phobia to have.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 41) {
+            theFact.innerHTML = "A company in Taiwan makes dinnerware out of wheat, so you can eat your plate!";
+            theFact.className = "animate-bobbing";
+        } else if (random == 42) {
+            theFact.innerHTML = "The Bible is the most shoplifted book in the world.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 43) {
+            theFact.innerHTML = "Marco Hort has the world record for fitting 264 straws in his mouth at once!";
+            theFact.className = "animate-bobbing";
+        } else if (random == 44) {
+            theFact.innerHTML = "Mel Blanc – the voice of Bugs Bunny – was allergic to carrots.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 45) {
+            theFact.innerHTML = "California has issued 6 drivers licenses to people named Jesus Christ.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 46) {
+            theFact.innerHTML = "According to Genesis 1:20-22 the chicken came before the egg.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 47) {
+            theFact.innerHTML = "The inventor of the Waffle Iron did not like waffles.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 48) {
+            theFact.innerHTML = "George W. Bush was once a cheerleader.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 49) {
+            theFact.innerHTML = "Mewtwo is a clone of the Pokémon Mew, yet it comes before Mew in the Pokédex.";
+            theFact.className = "animate-bobbing";
+        } else if (random == 50) {
+            theFact.innerHTML = "Kleenex tissues were originally used as filters in gas masks.";
+            theFact.className = "animate-bobbing";
+        } else if (random < 0 || random > 50) {
+            // Calculation went wrong somewhere, force refresh
+            location.reload(true);
+        }
+    }
+</script>
