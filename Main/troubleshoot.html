@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Troubleshooting Guide</title>
-		<!-- Attach CSS Stylesheet -->
-		<link rel="stylesheet" href="style.css">
-        <!-- Attach FontAwesome icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body class="bg-lightGreen fg-darkBlue">
-        <div class="alignCenter">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Convertor</a>
-    <div class="dropdown-content">
-      <a href="ktm.html">Kilometres to Miles</a>
-      <a href="hts.html">Hours to Seconds</a>
-		<a href="calculator.html">Calculator</a>
-	  </div>
-	</li>
-	</ul>
-	<div class="animate-fade">
-		<h1 class="mainHeading animate-fade">Troubleshoot</h1>
+<head>
+	<title>Troubleshooting Guide</title>
+	<!-- Attach CSS Stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Attach time function (js) -->
+	<script src="time.js"></script>
+	<!-- Attach FontAwesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-lightGreen fg-darkBlue">
+	<div class="alignCenter">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Mathematics</a>
+				<div class="dropdown-content">
+					<a href="algebra.html">Algebra</a>
+					<a href="ktm.html">Kilometres to Miles</a>
+					<a href="hts.html">Hours to Seconds</a>
+					<a href="ptkg.html">Pounds to Kilograms</a>
+					<a href="eoo.html">Even or Odd</a>
+					<a href="calculator.html">Calculator</a>
+				</div>
+			</li>
+			<li style="float: right;"><a id="time"></a></li>
+		</ul>
+		<div class="animate-fade">
+			<h1 class="mainHeading animate-fade">Troubleshoot</h1>
 			<p>&#9660; Here you can find the common errors, alongside some ways to handle them. &#9660;</p>
-            <br />
-            <br />
-            <p style="text-align: left;">You cannot see animations:</p>
-            <li>Use Google Chrome</li>
-            <br />
-            <p style="text-align: left;">You cannot use any convertor/calculator</p>
-            <li>Probably a fault by me, I most likely am working on it. Check back later. Open an issue on github if needed</li></p>
-            <br />
-            <p style="text-align:left;">Buttons are not working (ie. broken)</p>
-            <li>Potentially a fault in your browser, since chrome is the only browser supported correctly. Open an issue on github if the issue hasnt been resolved in a couple of days</li>
-	</div>
+			<br />
+			<br />
+			<p style="text-align: left;">You cannot see animations:</p>
+			<li>Use Google Chrome</li>
+			<br />
+			<p style="text-align: left;">You cannot use any convertor/calculator</p>
+			<li>Probably a fault by me, I most likely am working on it. Check back later. Open an issue on github if needed</li>
+			<br />
+			<p style="text-align:left;">Buttons are not working (ie. broken)</p>
+			<li>Potentially a fault in your browser, since chrome is the only browser supported correctly. Open an issue on github if the issue hasnt been resolved in a couple of days</li>
 		</div>
-		<footer>
-			<ul>
-				<li><a href="license.html">License</a></li>
-                <li><a href="troubleshoot.html">Troubleshoot</a></li>
-			</ul>
-		</footer>
-	</body>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="license.html">License</a></li>
+			<li><a href="troubleshoot.html">Troubleshoot</a></li>
+			<li style="float: right;"><a href="debug.html" style="color: gray;" onclick="return false;">Fun</a></li>
+		</ul>
+	</footer>
+</body>
 </html>

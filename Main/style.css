@@ -16,9 +16,6 @@ p {
 
 .fg-darkBlue {
 	color: #2A65CC !important;
-	/*
-        color: #f0f0f0;
-    */
 }
 
 .mainHeading {
@@ -36,6 +33,10 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: #6AB78A;
+}
+
+a, #disabled {
+	color: gray;
 }
 
 li {
@@ -286,7 +287,7 @@ input[type=text] {
 	}
 }
 
-#rainbow {
+.rainbow {
 	animation: rainbow 7s infinite;
 }
 
@@ -297,92 +298,162 @@ footer {
 	width: 100%;
 	overflow: hidden;
 }
+
 .animate-black-white {
 	animation: black-white 1.375s infinite;
 }
+
 @keyframes black-white {
 	0% {
 		background-color: #FFFFFF;
 		color: #000000;
 	}
+
 	5% {
 		background-color: #FFFFFF;
 		color: #000000;
 	}
+
 	10% {
 		background-color: #E5E5E5;
 		color: #191919;
 	}
+
 	15% {
 		background-color: #CCCCCC;
 		color: #333333;
 	}
+
 	20% {
 		background-color: #B2B2B2;
 		color: #4C4C4C;
 	}
+
 	25% {
 		background-color: #999999;
 		color: #666666;
 	}
+
 	30% {
 		background-color: #7F7F7F;
 		color: #7F7F7F;
 	}
+
 	35% {
 		background-color: #666666;
 		color: #999999;
 	}
+
 	40% {
 		background-color: #4C4C4C;
 		color: #B2B2B2;
 	}
+
 	45% {
 		background-color: #333333;
 		color: #CCCCCC;
 	}
+
 	50% {
 		background-color: #191919;
 		color: #E5E5E5;
 	}
+
 	55% {
 		background-color: #000000;
 		color: #FFFFFF;
 	}
+
 	60% {
 		background-color: #191919;
 		color: #E5E5E5;
 	}
+
 	65% {
 		background-color: #333333;
 		color: #CCCCCC;
 	}
+
 	70% {
 		background-color: #4C4C4C;
 		color: #B2B2B2;
 	}
+
 	75% {
 		background-color: #666666;
 		color: #999999;
 	}
+
 	80% {
 		background-color: #7F7F7F;
 		color: #7F7F7F;
 	}
+
 	85% {
 		background-color: #999999;
 		color: #666666;
 	}
+
 	90% {
 		background-color: #B2B2B2;
 		color: #4C4C4C;
 	}
+
 	95% {
 		background-color: #CCCCCC;
 		color: #333333;
 	}
+
 	100% {
 		background-color: #E5E5E5;
 		color: #191919;
+	}
+}
+
+.animate-left {
+	position: relative;
+	animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+	from {
+		left: -300px;
+		opacity: 0
+	}
+
+	to {
+		left: 0;
+		opacity: 1
+	}
+}
+
+.animate-right {
+	position: relative;
+	animation: animateright 0.4s
+}
+
+@keyframes animateright {
+	from {
+		right: -300px;
+		opacity: 0
+	}
+
+	to {
+		right: 0;
+		opacity: 1
+	}
+}
+
+.animate-bobbing {
+	animation: bobbing-up-down 6s ease-in-out infinite
+}
+
+@keyframes bobbing-up-down {
+	25% {
+		transform: translateY(-10px);
+	}
+
+	75% {
+		transform: translateY(10px);
 	}
 }

@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculator</title>
-		<!-- Attach CSS Stylesheet -->
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body class="bg-lightGreen fg-darkBlue ">
-        <div class="alignCenter">
-        <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Convertor</a>
-    <div class="dropdown-content">
-      <a href="ktm.html">Kilometres to Miles</a>
-      <a href="hts.html">Hours to Seconds</a>
-		<a href="calculator.html">Calculator</a>
-	  </div>
-	</li>
-	</ul>
-	<div class="animate-fade alignCenter">
-		<h1 class="mainHeading">Generic Calculator</h1>
-			<p>&#9660; A simple and efficient calculator &#9660;</p>
-		<!-- todo: work on userinput calculation and scientific calculator-->
-		<form name="calculator" class="border">
-			<br />
-			<input type="text" name="ans" value="" disabled>
-			<br />
-			<br />
-			<input class="button-calculator" type="button" value="1" onClick="document.calculator.ans.value+='1'">
-			<input class="button-calculator" type="button" value="2" onClick="document.calculator.ans.value+='2'">
-			<input class="button-calculator" type="button" value="3" onClick="document.calculator.ans.value+='3'">
-			<input class="button-calculator" type="button" value="+" onClick="document.calculator.ans.value+='+'">
-			<br />
-			<input class="button-calculator" type="button" value="4" onClick="document.calculator.ans.value+='4'">
-			<input class="button-calculator" type="button" value="5" onClick="document.calculator.ans.value+='5'">
-			<input class="button-calculator" type="button" value="6" onClick="document.calculator.ans.value+='6'">
-			<input class="button-calculator" type="button" value="-" onClick="document.calculator.ans.value+='-'">
-			<br />
-			<input class="button-calculator" type="button" value="7" onClick="document.calculator.ans.value+='7'">
-			<input class="button-calculator" type="button" value="8" onClick="document.calculator.ans.value+='8'">
-			<input class="button-calculator" type="button" value="9" onClick="document.calculator.ans.value+='9'">
-			<input class="button-calculator" type="button" value="*" onClick="document.calculator.ans.value+='*'">
-			<br />
-			<input class="button-calculator" type="button" value="/" onClick="document.calculator.ans.value+='/'">
-			<input class="button-calculator" type="button" value="0" onClick="document.calculator.ans.value+='0'">
-			<input class="button-calculator" type="reset" value="&larr;">
-			<input class="button-calculator" type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-            <br />
-			<br />
-		</form>
+<head>
+	<title>Calculator</title>
+	<!-- Attach CSS Stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Attach time function (js) -->
+	<script src="time.js"></script>
+</head>
+<body class="bg-lightGreen fg-darkBlue ">
+	<div class="alignCenter">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Mathematics</a>
+				<div class="dropdown-content">
+					<a href="algebra.html">Algebra</a>
+					<a href="ktm.html">Kilometres to Miles</a>
+					<a href="hts.html">Hours to Seconds</a>
+					<a href="ptkg.html">Pounds to Kilograms</a>
+					<a href="eoo.html">Even or Odd</a>
+					<a href="calculator.html">Calculator</a>
+				</div>
+			</li>
+			<li style="float: right;"><a id="time"></a></li>
+		</ul>
+		<div class="animate-fade alignCenter">
+			<h1 class="mainHeading">Generic Calculator</h1>
+			<p class="animate-bobbing">&#9660; A simple and efficient calculator &#9660;</p>
+			<!-- todo: work on userinput calculation and scientific calculator-->
+			<form name="calculator" class="border">
+				<br />
+				<input type="text" name="ans" value="" disabled>
+				<br />
+				<br />
+				<input class="button-calculator" type="button" value="1" onClick="document.calculator.ans.value+='1'">
+				<input class="button-calculator" type="button" value="2" onClick="document.calculator.ans.value+='2'">
+				<input class="button-calculator" type="button" value="3" onClick="document.calculator.ans.value+='3'">
+				<input class="button-calculator" type="button" value="+" onClick="document.calculator.ans.value+='+'">
+				<br />
+				<input class="button-calculator" type="button" value="4" onClick="document.calculator.ans.value+='4'">
+				<input class="button-calculator" type="button" value="5" onClick="document.calculator.ans.value+='5'">
+				<input class="button-calculator" type="button" value="6" onClick="document.calculator.ans.value+='6'">
+				<input class="button-calculator" type="button" value="-" onClick="document.calculator.ans.value+='-'">
+				<br />
+				<input class="button-calculator" type="button" value="7" onClick="document.calculator.ans.value+='7'">
+				<input class="button-calculator" type="button" value="8" onClick="document.calculator.ans.value+='8'">
+				<input class="button-calculator" type="button" value="9" onClick="document.calculator.ans.value+='9'">
+				<input class="button-calculator" type="button" value="*" onClick="document.calculator.ans.value+='*'">
+				<br />
+				<input class="button-calculator" type="button" value="/" onClick="document.calculator.ans.value+='/'">
+				<input class="button-calculator" type="button" value="0" onClick="document.calculator.ans.value+='0'">
+				<input class="button-calculator" type="reset" value="&larr;">
+				<input class="button-calculator" type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+				<br />
+				<br />
+			</form>
 		</div>
 	</div>
-		<footer>
-			<ul>
-				<li><a href="license.html">License</a></li>
-                <li><a href="troubleshoot.html">Troubleshoot</a></li>
-			</ul>
-		</footer>
-	</body>
+	<footer>
+		<ul>
+			<li><a href="license.html">License</a></li>
+			<li><a href="troubleshoot.html">Troubleshoot</a></li>
+			<li style="float: right;"><a href="debug.html" style="color: gray;" onclick="return false;">Fun</a></li>
+		</ul>
+	</footer>
+</body>
 </html>

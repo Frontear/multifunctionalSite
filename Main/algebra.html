@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Algebra Calculator</title>
+	<!-- Attach CSS Stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Attach time function (js) -->
+	<script src="time.js"></script>
+</head>
+<body class="bg-lightGreen fg-darkBlue ">
+	<div class="alignCenter">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Mathematics</a>
+				<div class="dropdown-content">
+					<a href="algebra.html">Algebra</a>
+					<a href="ktm.html">Kilometres to Miles</a>
+					<a href="hts.html">Hours to Seconds</a>
+					<a href="ptkg.html">Pounds to Kilograms</a>
+					<a href="eoo.html">Even or Odd</a>
+					<a href="calculator.html">Calculator</a>
+				</div>
+			</li>
+			<li style="float: right;"><a id="time"></a></li>
+		</ul>
+		<div class="animate-fade">
+			<h1 class="mainHeading">Algebra Calculator</h1>
+			<p class="animate-bobbing">&#9660; Type in your values, and they will be calculated below &#9660;</p>
+			<br />
+			<!-- Begin the pythagorean theorem -->
+			<p>Pythagorean Theorem</p>
+			<input type="text" placeholder="a" id="pythaA">
+			<input type="text" placeholder="b" id="pythaB">
+			<br />
+			<button class="button button-shadow animate-top" id="solve" onclick="beginCalc()">Solve</button>
+			<br />
+			<input type="text" placeholder="c" id="pythaC">
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="license.html">License</a></li>
+			<li><a href="troubleshoot.html">Troubleshoot</a></li>
+			<li style="float: right;"><a href="debug.html" style="color: gray;" onclick="return false;">Fun</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
+<script>
+	// Ugly and inefficient script, todo: find a better way to do this
+	var calcA = document.getElementById("pythaA");
+	var calcB = document.getElementById("pythaB");
+	var calcC = document.getElementById("pythaC");
+
+	function beginCalc() {
+		var a = parseFloat(calcA.value);
+		var b = parseFloat(calcB.value);
+		var c = parseFloat(calcC.value);
+
+		//Useful only for when B is being calculated
+		var BbiggerValue = Math.max((b * b), (c * c));
+		var BsmallerValue = Math.min((b * b), (c * c));
+
+		//Useful only for when A is being calculated
+		var AbiggerValue = Math.max((a * a), (c * c));
+		var AsmallerValue = Math.min((a * a), (c * c));
+
+		if (isNaN(a) && isNaN(b) && isNaN(c)) {
+			alert("Sorry, you need values to calculate");
+
+		} else if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+			alert("You cannot calculate with 3 values");
+
+		} else if (isNaN(a) && !isNaN(b) && !isNaN(c)) {
+			// User wishes to calculate for A
+			var Acalc = BbiggerValue - BsmallerValue;
+
+			calcA.value = Math.sqrt(Acalc);
+			calcB.value = Math.sqrt(BsmallerValue);
+			calcC.value = Math.sqrt(BbiggerValue);
+
+		} else if (!isNaN(a) && !isNaN(b) && isNaN(c)) {
+			// User wishes to calculate for C
+			var Ccalc = (a * a) + (b * b);
+
+			calcC.value = Math.sqrt(Ccalc);
+		} else if (!isNaN(a) && isNaN(b) && !isNaN(c)) {
+			// User wishes to calculate for B
+			var Bcalc = AbiggerValue - AsmallerValue;
+
+			calcB.value = Math.sqrt(Bcalc);
+			calcA.value = Math.sqrt(AsmallerValue);
+			calcC.value = Math.sqrt(AbiggerValue);
+		}
+	}
+</script>

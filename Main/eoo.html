@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Kilometres to Seconds convertor</title>
+	<title>Even or Odd Calculator</title>
 	<!-- Attach CSS Stylesheet -->
 	<link rel="stylesheet" href="style.css">
 	<!-- Attach time function (js) -->
@@ -25,14 +25,13 @@
 			<li style="float: right;"><a id="time"></a></li>
 		</ul>
 		<div class="animate-fade">
-			<h1 class="mainHeading">Kilometres to Miles Convertor</h1>
+			<h1 class="mainHeading">Even or Odd Calculator</h1>
 			<p class="animate-bobbing">&#9660; Type in your values, and they will be converted below &#9660;</p>
 			<br />
-			<input type="text" placeholder="Kilometres" id="km">
+			<input type="text" placeholder="Value" id="value">
 			<br />
-			<button class="button button-shadow animate-top" id="convert">Convert</button>
-			<br />
-			<input type="text" placeholder="Result" id="result" disabled>
+			<button class="button button-shadow animate-top" id="convert" onclick="calc()">Calculate</button>
+			<p id="result"></p>
 		</div>
 	</div>
 	<footer>
@@ -45,20 +44,18 @@
 </body>
 </html>
 <script>
-	//General Variables
-	var kilometres = document.getElementById("km");
-	var con = document.getElementById("convert");
-	var res = document.getElementById("result")
+	//General variables
+	var val = document.getElementById("value");
+	
 
-	//When Convert button clicked, call convert()
-	con.addEventListener("click", convert);
-
-	function convert() {
-		var firstValue = parseFloat(kilometres.value); // Parse it, or read it as a float
+	function calc() {
+		var firstValue = parseFloat(val.value); // Parse it, or read it as a float
 		if (isNaN(firstValue)) { // If the parsed value is NaN (Not a Number)
-			alert("The kilometres is not a valid number");
-		} else {
-			res.value = firstValue * 0.621;
+			alert("The hours is not a valid number");
+		} else if (val.value % 2 == 0) {
+			document.getElementById("result").innerHTML = "The value " + val.value + " is even!";
+		} else if (val.value % 2 != 0) {
+			document.getElementById("result").innerHTML = "The value " + val.value + " is odd!";
 		}
 	}
 </script>
