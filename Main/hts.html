@@ -29,14 +29,8 @@
 			<h1 class="mainHeading">Hours to Seconds Convertor</h1>
 			<p class="animate-bobbing">&#9660; Type in your values, and they will be converted below &#9660;</p>
 			<br />
-			<input type="text" placeholder="Years" id="years" oninput="convertYears(this.value)">
-			<input type="text" placeholder="Months" id="months" oninput="convertMonths(this.value)">
-			<input type="text" placeholder="Weeks" id="weeks" oninput="convertWeeks(this.value)">
-			<br />
-			<input type="text" placeholder="Days" id="days" oninput="convertDays(this.value)">
-			<input type="text" placeholder="Hours" id="hours" oninput="convertHours(this.value)">
-			<input type="text" placeholder="Minutes" id="minutes" oninput="convertMinutes(this.value)">
-			<input type="text" placeholder="Seconds" id="seconds" oninput="convertSeconds(this.value)">
+			<input type="text" placeholder="Hours" id="hours">
+			<input type="text" placeholder="Seconds" id="result" disabled>
 		</div>
 	</div>
 	<footer>
@@ -49,66 +43,20 @@
 </body>
 </html>
 <script>
-	function convertYears(val) {
-		document.getElementById("months").value = Math.round(val * 12) + " months";
-		document.getElementById("weeks").value = Math.round(val * 52.178) + " weeks";
-		document.getElementById("days").value = Math.round(val * 365.24) + " days";
-		document.getElementById("hours").value = Math.round(val * 8765.8) + " hours";
-		document.getElementById("minutes").value = Math.round(val * 525949) + " minutes";
-		document.getElementById("seconds").value = Math.round(val * 31556952) + " seconds";
-	}
+	//General variables
+	var hrs = document.getElementById("hours");
+	var con = document.getElementById("convert");
+	var res = document.getElementById("result")
 
-	function convertMonths(val) {
-		document.getElementById("years").value = Math.round(val / 12.0) + " years";
-		document.getElementById("weeks").value = Math.round(val * 4.34524) + " weeks";
-		document.getElementById("days").value = Math.round(val * 30.4167) + " days";
-		document.getElementById("hours").value = Math.round(val * 730.001) + " hours";
-		document.getElementById("minutes").value = Math.round(val * 43800) + " minutes";
-		document.getElementById("seconds").value = Math.round(val * 2629746) + " seconds";
-	}
+	//When Convert button clicked, call convert()
+	con.addEventListener("click", convert);
 
-	function convertWeeks(val) {
-		document.getElementById("years").value = Math.round(val * 0.0191781) + " years";
-		document.getElementById("months").value = Math.round(val * 0.230137) + " months";
-		document.getElementById("days").value = Math.round(val * 7) + " days";
-		document.getElementById("hours").value = Math.round(val * 168) + " hours";
-		document.getElementById("minutes").value = Math.round(val * 10080) + " minutes";
-		document.getElementById("seconds").value = Math.round(val * 2629746) + " seconds";
-	}
-
-	function convertDays(val) {
-		document.getElementById("years").value = Math.round(val / 12.0) + " years";
-		document.getElementById("months").value = Math.round(val * 4.34524) + " months";
-		document.getElementById("weeks").value = Math.round(val * 30.4167) + " weeks";
-		document.getElementById("hours").value = Math.round(val * 730.001) + " hours";
-		document.getElementById("minutes").value = Math.round(val * 43800) + " minutes";
-		document.getElementById("seconds").value = Math.round(val * 2629746) + " seconds";
-	}
-
-	function convertHours(val) {
-		document.getElementById("years").value = Math.round(val / 12.0) + " years";
-		document.getElementById("months").value = Math.round(val * 4.34524) + " months";
-		document.getElementById("weeks").value = Math.round(val * 30.4167) + " weeks";
-		document.getElementById("days").value = Math.round(val * 730.001) + " days";
-		document.getElementById("minutes").value = Math.round(val * 43800) + " minutes";
-		document.getElementById("seconds").value = Math.round(val * 2629746) + " seconds";
-	}
-
-	function convertMinutes(val) {
-		document.getElementById("years").value = Math.round(val / 12.0) + " years";
-		document.getElementById("months").value = Math.round(val * 4.34524) + " months";
-		document.getElementById("weeks").value = Math.round(val * 30.4167) + " weeks";
-		document.getElementById("days").value = Math.round(val * 730.001) + " days";
-		document.getElementById("hours").value = Math.round(val * 43800) + " hours";
-		document.getElementById("seconds").value = Math.round(val * 2629746) + " seconds";
-	}
-
-	function convertSeconds(val) {
-		document.getElementById("years").value = Math.round(val / 12.0) + " years";
-		document.getElementById("months").value = Math.round(val * 4.34524) + " months";
-		document.getElementById("weeks").value = Math.round(val * 30.4167) + " weeks";
-		document.getElementById("days").value = Math.round(val * 730.001) + " days";
-		document.getElementById("hours").value = Math.round(val * 43800) + " hours";
-		document.getElementById("minutes").value = Math.round(val * 2629746) + " minutes";
+	function convert() {
+		var firstValue = parseFloat(hrs.value); // Parse it, or read it as a float
+		if (isNaN(firstValue)) { // If the parsed value is NaN (Not a Number)
+			alert("The hours is not a valid number");
+		} else {
+			res.value = firstValue * (60 * 60);
+		}
 	}
 </script>
